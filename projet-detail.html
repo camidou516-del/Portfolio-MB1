@@ -3,53 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Documentaire Institutionnel Déclic - Maleyni Ba</title>
+  <title>Détail du Projet - Maleyni Ba</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body>
+<body style="background-color: var(--bg-dark);">
 
-  <!-- NAVIGATION -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">MALEYNI<span>.BA</span></div>
-    <a href="index.html#realisations" class="btn-secondary">&larr; Retour au portfolio</a>
+    <a href="index.html#realisations" class="btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">&larr; Retour au portfolio</a>
   </nav>
 
-  <!-- CONTENU DÉTAIL DU PROJET -->
-  <main style="padding: 3rem 8%; max-width: 1000px; margin: 0 auto;">
+  <!-- EN-TÊTE CENTRÉ DU PROJET -->
+  <header class="project-header">
+    <span id="project-category" class="card-tag">RÉALISATION AUDIOVISUELLE</span>
+    <h1 id="project-title">Chargement du projet...</h1>
+    <p id="project-subtitle" class="project-subtitle">...</p>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="project-detail-wrapper">
     
-    <span class="card-tag" style="font-size: 0.9rem;">RÉALISATION AUDIOVISUELLE</span>
-    <h1 style="font-size: 2.2rem; margin: 0.5rem 0 1.5rem 0;">Documentaire Institutionnel Déclic</h1>
+    <!-- LECTEUR VIDÉO / GALERIE PHOTOS -->
+    <div id="media-content" class="media-section"></div>
 
-    <!-- LECTEUR VIDÉO GOOGLE DRIVE -->
-    <div class="video-container">
-      <iframe 
-        src="https://drive.google.com/file/d/1zyW2MCNLEwXCVXsRp9zpWiIOqpjNx7_h/preview" 
-        allow="autoplay"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <!-- INFORMATIONS DU PROJET -->
-    <div class="project-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color); margin-top: 2rem;">
-      <div>
-        <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem;">Description</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">
-          Capitalisation des actions et réalisations sur le terrain pour l'ONG Déclic à Ziguinchor. Collecte d'informations, prise de vue, cadrage et montage complet du reportage.
-        </p>
-      </div>
-      <div>
-        <h3 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem;">Fiche Technique</h3>
-        <ul style="list-style: none; color: var(--text-muted); font-size: 0.9rem; line-height: 1.8;">
-          <li><strong>Rôle :</strong> Réalisateur / Cadreur / Monteur</li>
-          <li><strong>Organisation :</strong> Déclic</li>
-          <li><strong>Lieu :</strong> Ziguinchor, Sénégal</li>
-          <li><strong>Logiciels :</strong> Premiere Pro, DaVinci Resolve</li>
+    <!-- DOUBLE COLONNE : À PROPOS (GAUCHE) & FICHE TECHNIQUE (DROITE) -->
+    <div class="project-grid-info">
+      
+      <!-- COLONNE GAUCHE : DESCRIPTION & SKILLS -->
+      <div class="info-block-left">
+        <h3>À propos du projet</h3>
+        <p id="project-description">...</p>
+        
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.8rem; font-size: 1rem; color: #fff;">Compétences déployées</h4>
+        <ul id="project-skills" class="skills-bullets">
+          <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Direction photo et cadrage multicaméra</li>
+          <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Enregistrement audio de haute précision pour interview</li>
+          <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Montage et étalonnage professionnel</li>
         </ul>
       </div>
+
+      <!-- COLONNE DROITE : FICHE TECHNIQUE -->
+      <div class="info-block-right">
+        <h3>Fiche Technique</h3>
+        <div class="ft-item">
+          <i class="fa-solid fa-user"></i>
+          <div>
+            <strong>Rôle :</strong>
+            <span id="ft-role">Réalisateur / Cadreur / Monteur</span>
+          </div>
+        </div>
+        <div class="ft-item">
+          <i class="fa-solid fa-building"></i>
+          <div>
+            <strong>Client / Structure :</strong>
+            <span id="ft-client">ONG Déclic</span>
+          </div>
+        </div>
+        <div class="ft-item">
+          <i class="fa-solid fa-calendar"></i>
+          <div>
+            <strong>Année :</strong>
+            <span id="ft-annee">2025</span>
+          </div>
+        </div>
+        <div class="ft-item">
+          <i class="fa-solid fa-laptop-code"></i>
+          <div>
+            <strong>Logiciels & Matériel :</strong>
+            <span id="ft-materiel">Premiere Pro, DaVinci Resolve</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div style="margin-top: 2.5rem; text-align: center;">
+    <!-- BOUTON RETOUR BAS -->
+    <div style="text-align: center; margin-top: 3rem;">
       <a href="index.html#realisations" class="btn-primary">&larr; Voir d'autres projets</a>
     </div>
 
@@ -59,5 +90,146 @@
     <p>&copy; 2026 Maleyni Ba. Tous droits réservés.</p>
   </footer>
 
+  <script>
+    // BASE DE DONNÉES AVEC LES 6 LIENS GOOGLE DRIVE & LA GALERIE PHOTOS
+    const projectsData = {
+      "declic": {
+        title: "Documentaire Institutionnel Déclic",
+        category: "RÉALISATION AUDIOVISUELLE",
+        subtitle: "Valorisation des actions de développement et de capitalisation à Ziguinchor.",
+        description: "Ce projet vidéo de capitalisation a été réalisé pour l'ONG Déclic à Ziguinchor. L'objectif était de capturer le témoignage direct des bénéficiaires et d'illustrer visuellement l'impact des actions de développement sur le terrain.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/1zyW2MCNLEwXCVXsRp9zpWiIOqpjNx7_h/preview",
+        role: "Réalisateur / Cadreur / Monteur",
+        client: "ONG Déclic",
+        annee: "2025",
+        materiel: "Caméra 4K, Éclairage LED, DaVinci Resolve"
+      },
+      "projet2": {
+        title: "Reportage Terrain & Interview",
+        category: "RÉALISATION AUDIOVISUELLE",
+        subtitle: "Immersions visuelles et récits humains au cœur du Sénégal.",
+        description: "Reportage vidéo de terrain axé sur la narration humaine, la prise de vue multicaméra et l'enregistrement sonore de précision sur le terrain.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/1nqWwrU_ay_g17SK7zAVZnqdAbgxxw3S7/preview",
+        role: "Cadreur & Prise de son",
+        client: "Senmedias",
+        annee: "2024",
+        materiel: "Kit Micro HF, Sony Alpha, Premiere Pro"
+      },
+      "projet3": {
+        title: "Captation Événementielle Live",
+        category: "RÉALISATION AUDIOVISUELLE",
+        subtitle: "Couverture en direct et gestion de régie vidéo multicaméra.",
+        description: "Captation et diffusion en direct d'un grand événement institutionnel. Gestion du flux vidéo et régie en temps réel avec une équipe technique dédiée.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/1TSCmUuy4BiEpIJDyvP625h_puPMNuWKF/preview",
+        role: "Opérateur Vidéo Live / Régisseur",
+        client: "Win Global",
+        annee: "2023",
+        materiel: "vMix, Caméras PTZ, Régie HD"
+      },
+      "projet4": {
+        title: "Spot Publicitaire & Promo",
+        category: "RÉALISATION AUDIOVISUELLE",
+        subtitle: "Capsules dynamiques et accrocheuses pour campagnes digitales.",
+        description: "Production rythmé avec étalonnage cinématique et motion design pour une communication institutionnelle à fort impact visuel.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/1P2S80Exaxkz1thsDUG0M93CLHKhMSWCq/preview",
+        role: "Monteur & Étalonneur",
+        client: "Client Privé",
+        annee: "2024",
+        materiel: "DaVinci Resolve, After Effects"
+      },
+      "projet5": {
+        title: "Émission Plateau Télévisée",
+        category: "RÉALISATION AUDIOVISUELLE",
+        subtitle: "Production studio et maîtrise du cadrage en direct.",
+        description: "Réalisation et cadrage d'une série d'émissions télévisées enregistrées en studio professionnel avec gestion complète de la lumière et du son.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/1zyW2MCNLEwXCVXsRp9zpWiIOqpjNx7_h/preview",
+        role: "Cadreur Plateau",
+        client: "Senmedias",
+        annee: "2023",
+        materiel: "Caméras Studio, Éclairage Trois Points"
+      },
+      "projet6": {
+        title: "Film Corporate & Entreprise",
+        category: "RÉALISATION AUDIOVISUELLE",
+        subtitle: "Présentation de la vision et des projets des dirigeants.",
+        description: "Film institutionnel présentant les activités, la vision et l'équipe d'une grande entreprise avec interviews d'experts et prises de vue aériennes.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/12AEt6G5QgZmKmzDz26u2GkB2o3IyVGRH/preview",
+        role: "Réalisateur & Monteur",
+        client: "Entreprise",
+        annee: "2024",
+        materiel: "Stabilisateur Drone, Premiere Pro"
+      },
+      "coulisses": {
+        title: "Série Clichés & Coulisses de Tournage",
+        category: "EXPERTISE COUP DE CŒUR",
+        subtitle: "Galerie immersive des moments forts de production et de tournage.",
+        description: "Découvrez les coulisses de fabrication des contenus audiovisuels : préparation du matériel, réglages lumière, cadrages sur le terrain et ambiance d'équipe.",
+        type: "gallery",
+        images: [
+          "assets/photo/0H2A0997.jpg",
+          "assets/photo/DSC06000.jpg",
+          "assets/photo/b6.jpg",
+          "assets/photo/b2.jpg",
+          "assets/photo/b3.jpg",
+          "assets/photo/DSC08566.jpg",
+          "assets/photo/b1.jpg",
+          "assets/photo/DSC05972.jpg",
+          "assets/photo/DSC08467.jpg"
+        ],
+        role: "Opérateur Vidéo / Photographe",
+        client: "Production Indépendante",
+        annee: "2025",
+        materiel: "Sony, Lightroom, Photoshop"
+      }
+    };
+
+    // INJECTION DYNAMIQUE DES DONNÉES DE LA PAGE
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('id') || 'declic';
+      const project = projectsData[projectId] || projectsData['declic'];
+
+      document.getElementById('project-title').innerText = project.title;
+      document.getElementById('project-category').innerText = project.category;
+      document.getElementById('project-subtitle').innerText = project.subtitle;
+      document.getElementById('project-description').innerText = project.description;
+      
+      document.getElementById('ft-role').innerText = project.role;
+      document.getElementById('ft-client').innerText = project.client;
+      document.getElementById('ft-annee').innerText = project.annee;
+      document.getElementById('ft-materiel').innerText = project.materiel;
+
+      const mediaContainer = document.getElementById('media-content');
+
+      if (project.type === 'video') {
+        mediaContainer.innerHTML = `
+          <div class="video-container">
+            <iframe 
+              src="${project.videoSrc}" 
+              allow="autoplay; fullscreen" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        `;
+      } else if (project.type === 'gallery') {
+        let galleryHTML = '<div class="gallery-grid">';
+        project.images.forEach(imgSrc => {
+          galleryHTML += `
+            <div class="gallery-item">
+              <img src="${imgSrc}" alt="Coulisse tournage Maleyni Ba" loading="lazy" />
+            </div>
+          `;
+        });
+        galleryHTML += '</div>';
+        mediaContainer.innerHTML = galleryHTML;
+      }
+    });
+  </script>
 </body>
 </html>

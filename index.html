@@ -5,29 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maleyni Ba - Opérateur Vidéo | Cadreur | Réalisateur</title>
   <link rel="stylesheet" href="css/style.css" />
-  <!-- FontAwesome 6 pour les icônes de contact & boutons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
   <!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="logo">MALEYNI<span>.BA</span></div>
-  
-  <!-- Bouton Burger Mobile -->
-  <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
-    <i class="fa-solid fa-bars"></i>
-  </button>
+  <nav class="navbar">
+    <div class="logo">MALEYNI<span>.BA</span></div>
+    
+    <!-- Bouton Burger (Mobile) -->
+    <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#apropos" class="nav-item">À propos</a></li>
-    <li><a href="#realisations" class="nav-item">Réalisations</a></li>
-    <li><a href="#experience" class="nav-item">Expérience</a></li>
-    <li><a href="#competences" class="nav-item">Compétences</a></li>
-    <li><a href="#references" class="nav-item">Références</a></li>
-    <li><a href="#contact" class="btn-contact nav-item">Me Contacter</a></li>
-  </ul>
-</nav>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#apropos" class="nav-item">À propos</a></li>
+      <li><a href="#realisations" class="nav-item">Réalisations</a></li>
+      <li><a href="#experience" class="nav-item">Expérience</a></li>
+      <li><a href="#competences" class="nav-item">Compétences</a></li>
+      <li><a href="#references" class="nav-item">Références</a></li>
+      <li><a href="#contact" class="btn-contact nav-item">Me Contacter</a></li>
+    </ul>
+  </nav>
 
   <!-- HERO SECTION -->
   <section class="hero" id="accueil">
@@ -39,10 +38,9 @@
         Opérateur vidéo passionné et créatif, spécialisé dans la captation et le montage d'images. Je dispose d'une bonne maîtrise des techniques de prise de vue, du cadrage et de la gestion de la lumière, ainsi que des logiciels de montage.
       </p>
       <div class="hero-buttons">
-        <!-- APRÈS (CORRIGÉ) -->
-<a href="assets/cv-maleyni-ba.pdf" download="CV_Maleyni_Ba.pdf" class="btn-primary">
-  <i class="fa-solid fa-download"></i> Télécharger mon CV
-</a>
+        <a href="assets/cv-maleyni-ba.pdf" download class="btn-primary">
+          <i class="fa-solid fa-download"></i> Télécharger mon CV
+        </a>
         <a href="#realisations" class="btn-secondary">Découvrir mes projets &rarr;</a>
       </div>
       <div class="social-links">
@@ -53,30 +51,26 @@
       </div>
     </div>
 
-    <!-- PHOTO HERO AVEC LES VRAIS LOGOS DES LOGICIELS -->
+    <!-- PHOTO HERO AVEC BADGES FLOOTTANTS -->
     <div class="hero-image-wrapper">
       <img src="assets/images/maleyni1.jpg" alt="Maleyni Ba" class="hero-img" />
-
+      
       <div class="skill-badge badge-1">
         <img src="assets/images/premierepro.jpg" alt="Premiere Pro" class="badge-icon" />
         <span>Montage</span>
       </div>
-
       <div class="skill-badge badge-2">
-        <img src="assets/images/Davinci.jpg" alt="DaVinci Resolve" class="badge-icon" />
+        <img src="assets/images/Davinci.jpg" alt="DaVinci" class="badge-icon" />
         <span>Étalonnage</span>
       </div>
-
       <div class="skill-badge badge-3">
-        <img src="assets/images/premierepro.jpg" alt="Prise de vue" class="badge-icon" />
+        <img src="assets/images/Lightroom.jpg" alt="Lightroom" class="badge-icon" />
         <span>Prise de vue</span>
       </div>
-
       <div class="skill-badge badge-4">
-        <img src="assets/images/vMix.jpg" alt="vMix" class="badge-icon" />
+        <i class="fa-solid fa-video badge-icon-fa"></i>
         <span>Réalisation</span>
       </div>
-
       <div class="skill-badge badge-5">
         <img src="assets/images/vMix.jpg" alt="vMix" class="badge-icon" />
         <span>Captation Live</span>
@@ -99,20 +93,19 @@
     </div>
   </section>
 
-  <!-- DOMAINES D'EXPERTISE & PORTFOLIO (7 PROJETS VIDÉOS) -->
-  <section class="portfolio-section" id="realisations">
-    <h2 class="section-title">Domaines d'Expertise & Portfolio</h2>
+  <!-- PORTFOLIO (7 CARTE PROJETS) -->
+<section class="portfolio-section" id="realisations">
+  <h2 class="section-title">Domaines d'Expertise & Portfolio</h2>
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">Tous les projets</button>
+    <button class="filter-btn" data-filter="audiovisuel">1. Réalisation Audiovisuelle</button>
+    <button class="filter-btn" data-filter="coup-de-coeur">2. Expertise (Coup de cœur)</button>
+  </div>
 
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">Tous les projets</button>
-      <button class="filter-btn" data-filter="audiovisuel">1. Réalisation Audiovisuelle</button>
-      <button class="filter-btn" data-filter="coup-de-coeur">2. Expertise (Coup de cœur)</button>
-    </div>
-
-    <div class="portfolio-grid">
-     <!-- PROJET 1 -->
+  <div class="portfolio-grid">
+    <!-- PROJET 1 -->
 <div class="portfolio-card" data-category="audiovisuel">
-  <div class="card-media" style="background-image: url('assets/images/maleyni1.jpg');">
+  <div class="card-media" style="background-color: #0d0d0d;">
     <a href="projet-detail.html?id=declic" class="play-overlay">
       <div class="play-icon"><i class="fa-solid fa-play"></i></div>
       <span>Voir le projet</span>
@@ -125,103 +118,103 @@
     <a href="projet-detail.html?id=declic" class="btn-link">Détails du projet &rarr;</a>
   </div>
 </div>
-      <!-- PROJET 2 -->
-      <div class="portfolio-card" data-category="audiovisuel">
-        <div class="card-media">
-          <a href="projet-detail.html?id=projet2" class="play-overlay">
-            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
-            <span>Voir le projet</span>
-          </a>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
-          <h3 class="card-title">Reportage Terrain & Interview</h3>
-          <p class="card-desc">Prise de vue multicaméra et enregistrement sonore haute précision pour reportage social.</p>
-          <a href="projet-detail.html?id=projet2" class="btn-link">Détails du projet &rarr;</a>
-        </div>
-      </div>
 
-      <!-- PROJET 3 -->
-      <div class="portfolio-card" data-category="audiovisuel">
-        <div class="card-media">
-          <a href="projet-detail.html?id=projet3" class="play-overlay">
-            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
-            <span>Voir le projet</span>
-          </a>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
-          <h3 class="card-title">Captation Événementielle Live</h3>
-          <p class="card-desc">Gestion de régie vidéo et retransmission directe en direct via vMix et caméras studio.</p>
-          <a href="projet-detail.html?id=projet3" class="btn-link">Détails du projet &rarr;</a>
-        </div>
-      </div>
+<!-- PROJET 2 -->
+<div class="portfolio-card" data-category="audiovisuel">
+  <div class="card-media" style="background-color: #0d0d0d;">
+    <a href="projet-detail.html?id=projet2" class="play-overlay">
+      <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+      <span>Voir le projet</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
+    <h3 class="card-title">Reportage Terrain & Interview</h3>
+    <p class="card-desc">Prise de vue multicaméra et enregistrement sonore haute précision pour reportage social.</p>
+    <a href="projet-detail.html?id=projet2" class="btn-link">Détails du projet &rarr;</a>
+  </div>
+</div>
 
-      <!-- PROJET 4 -->
-      <div class="portfolio-card" data-category="audiovisuel">
-        <div class="card-media">
-          <a href="projet-detail.html?id=projet4" class="play-overlay">
-            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
-            <span>Voir le projet</span>
-          </a>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
-          <h3 class="card-title">Spot Publicitaire & Promo</h3>
-          <p class="card-desc">Production dynamique de capsules promotionnelles avec étalonnage sur DaVinci Resolve.</p>
-          <a href="projet-detail.html?id=projet4" class="btn-link">Détails du projet &rarr;</a>
-        </div>
-      </div>
+<!-- PROJET 3 -->
+<div class="portfolio-card" data-category="audiovisuel">
+  <div class="card-media" style="background-color: #0d0d0d;">
+    <a href="projet-detail.html?id=projet3" class="play-overlay">
+      <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+      <span>Voir le projet</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
+    <h3 class="card-title">Captation Événementielle Live</h3>
+    <p class="card-desc">Gestion de régie vidéo et retransmission directe en direct via vMix et caméras studio.</p>
+    <a href="projet-detail.html?id=projet3" class="btn-link">Détails du projet &rarr;</a>
+  </div>
+</div>
 
-      <!-- PROJET 5 -->
-      <div class="portfolio-card" data-category="audiovisuel">
-        <div class="card-media">
-          <a href="projet-detail.html?id=projet5" class="play-overlay">
-            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
-            <span>Voir le projet</span>
-          </a>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
-          <h3 class="card-title">Émission Plateau Télévisée</h3>
-          <p class="card-desc">Cadrage plateau, gestion de la lumière studio et pré-montage en direct pour Senmedias.</p>
-          <a href="projet-detail.html?id=projet5" class="btn-link">Détails du projet &rarr;</a>
-        </div>
-      </div>
+<!-- PROJET 4 -->
+<div class="portfolio-card" data-category="audiovisuel">
+  <div class="card-media" style="background-color: #0d0d0d;">
+    <a href="projet-detail.html?id=projet4" class="play-overlay">
+      <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+      <span>Voir le projet</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
+    <h3 class="card-title">Spot Publicitaire & Promo</h3>
+    <p class="card-desc">Production dynamique de capsules promotionnelles avec étalonnage sur DaVinci Resolve.</p>
+    <a href="projet-detail.html?id=projet4" class="btn-link">Détails du projet &rarr;</a>
+  </div>
+</div>
 
-      <!-- PROJET 6 -->
-      <div class="portfolio-card" data-category="audiovisuel">
-        <div class="card-media">
-          <a href="projet-detail.html?id=projet6" class="play-overlay">
-            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
-            <span>Voir le projet</span>
-          </a>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
-          <h3 class="card-title">Film Corporate & Entreprise</h3>
-          <p class="card-desc">Présentation institutionnelle des activités d'entreprise et interviews des dirigeants.</p>
-          <a href="projet-detail.html?id=projet6" class="btn-link">Détails du projet &rarr;</a>
-        </div>
-      </div>
+<!-- PROJET 5 -->
+<div class="portfolio-card" data-category="audiovisuel">
+  <div class="card-media" style="background-color: #0d0d0d;">
+    <a href="projet-detail.html?id=projet5" class="play-overlay">
+      <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+      <span>Voir le projet</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
+    <h3 class="card-title">Émission Plateau Télévisée</h3>
+    <p class="card-desc">Cadrage plateau, gestion de la lumière studio et pré-montage en direct pour Senmedias.</p>
+    <a href="projet-detail.html?id=projet5" class="btn-link">Détails du projet &rarr;</a>
+  </div>
+</div>
 
-      <!-- PROJET 7 (COUP DE COEUR) -->
-      <div class="portfolio-card" data-category="coup-de-coeur">
-        <div class="card-media">
-          <a href="projet-detail.html?id=coulisses" class="play-overlay orange-overlay">
-            <div class="play-icon"><i class="fa-solid fa-camera"></i></div>
-            <span>Galerie Coulisses &rarr;</span>
-          </a>
-        </div>
-        <div class="card-body">
-          <span class="card-tag orange-tag">EXPERTISE COUP DE CŒUR</span>
-          <h3 class="card-title">Série Clichés & Coulisses de Tournage</h3>
-          <p class="card-desc">Immersion au cœur des tournages : cadrages complexes, prise de vue et esthétique de l'image.</p>
-          <a href="projet-detail.html?id=coulisses" class="btn-link">Détails du projet &rarr;</a>
-        </div>
+<!-- PROJET 6 -->
+<div class="portfolio-card" data-category="audiovisuel">
+  <div class="card-media" style="background-color: #0d0d0d;">
+    <a href="projet-detail.html?id=projet6" class="play-overlay">
+      <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+      <span>Voir le projet</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <span class="card-tag">RÉALISATION AUDIOVISUELLE</span>
+    <h3 class="card-title">Film Corporate & Entreprise</h3>
+    <p class="card-desc">Présentation institutionnelle des activités d'entreprise et interviews des dirigeants.</p>
+    <a href="projet-detail.html?id=projet6" class="btn-link">Détails du projet &rarr;</a>
+  </div>
+</div>
+    <!-- PROJET 7 : GALERIE COULISSES -->
+    <div class="portfolio-card" data-category="coup-de-coeur">
+      <div class="card-media" style="background-image: url('assets/photo/0H2A0992.jpg');">
+        <a href="projet-detail.html?id=coulisses" class="play-overlay orange-overlay">
+          <div class="play-icon"><i class="fa-solid fa-camera"></i></div>
+          <span>Galerie Coulisses &rarr;</span>
+        </a>
+      </div>
+      <div class="card-body">
+        <span class="card-tag orange-tag">EXPERTISE COUP DE CŒUR</span>
+        <h3 class="card-title">Série Clichés & Coulisses de Tournage</h3>
+        <p class="card-desc">Immersion au cœur des tournages : cadrages complexes, prise de vue et esthétique de l'image.</p>
+        <a href="projet-detail.html?id=coulisses" class="btn-link">Détails du projet &rarr;</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- EXPÉRIENCE PROFESSIONNELLE -->
   <section class="experience-section" id="experience">
@@ -231,25 +224,23 @@
         <div class="timeline-badge">2025 - Actuel</div>
         <div class="timeline-content">
           <h3>Réalisateur</h3>
-          <p class="company">Déclic • Ziguinchor</p>
+          <p class="company">Déclic Ziguinchor</p>
           <p class="desc">En charge de la capitalisation des projets : collecte d'informations, production de contenus et valorisation des actions de l'ONG.</p>
         </div>
       </div>
-
       <div class="timeline-item">
-        <div class="timeline-badge">2022 - 2024</div>
+        <div class="timeline-badge">2022-2024</div>
         <div class="timeline-content">
           <h3>Cadreur-Monteur</h3>
-          <p class="company">Senmedias • Dakar</p>
+          <p class="company">Senmedias Dakar</p>
           <p class="desc">Prise de vue, montage et réalisation d'émissions, avec un focus sur la qualité et la narration visuelle.</p>
         </div>
       </div>
-
       <div class="timeline-item">
-        <div class="timeline-badge">2021 - 2022</div>
+        <div class="timeline-badge">2021-2022</div>
         <div class="timeline-content">
           <h3>Cadreur (Stage)</h3>
-          <p class="company">Win Global • Dakar</p>
+          <p class="company">Win Global Dakar</p>
           <p class="desc">Prise de vue, cadrage et gestion du matériel, avec une attention particulière à la qualité des images.</p>
         </div>
       </div>
@@ -290,7 +281,7 @@
     </div>
   </section>
 
-  <!-- ME CONTACTER -->
+  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="contact-container">
       <h2 class="section-title centered-title">Me Contacter</h2>
