@@ -474,3 +474,15 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     grid-template-columns: 1fr;
   }
 }
+
+.exp-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: var(--text-muted, #a0a0a0);
+}
+
+.exp-list li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
