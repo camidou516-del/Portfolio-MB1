@@ -48,9 +48,63 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // 3. LIGHTBOX / AGRANDISSEMENT DES IMAGES DE LA GALERIE
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const closeModalBtn = document.getElementById('modal-close');
+
+  if (modal && modalImg && closeModalBtn) {
+    // Ouvrir la modale
+    const openModal = (src) => {
+      modalImg.src = src;
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // Bloque le défilement de la page
+    };
+
+    // Fermer la modale
+    const closeModal = () => {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = 'auto'; // Rétablit le défilement
+      setTimeout(() => {
+        modalImg.src = '';
+      }, 300);
+    };
+
+    // Écouteur global pour intercepter le clic sur n'importe quelle image de galerie
+    document.addEventListener('click', (e) => {
+      if (
+        e.target.tagName === 'IMG' &&
+        (e.target.closest('.gallery, #gallery, .coulisses-grid, .portfolio-card, [data-gallery]') ||
+          e.target.classList.contains('gallery-img'))
+      ) {
+        openModal(e.target.src);
+      }
+    });
+
+    // Fermeture via la croix
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Fermeture lors d'un clic en dehors de l'image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Fermeture avec la touche Échap (Escape)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
 });
 
 
+// 4. GESTION DU FORMULAIRE DE CONTACT (WEB3FORMS)
 const form = document.getElementById('contact-form');
 const result = document.getElementById('form-result');
 const submitBtn = document.getElementById('btn-submit');
@@ -108,4 +162,40 @@ if (form) {
         }, 5000); // Le message disparaît après 5 secondes
     });
   });
+
+  // GESTION DU ZOOM DES IMAGES (Compatible avec les images dynamiques projectsData)
+document.addEventListener('click', (e) => {
+  // Détecte le clic sur n'importe quelle balise <img> de la page (sauf celle de la modale elle-même)
+  if (e.target.tagName === 'IMG' && !e.target.closest('#image-modal')) {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+
+    if (modal && modalImg) {
+      e.stopPropagation(); // Évite les conflits si l'image est dans une carte cliquable
+      modalImg.src = e.target.src;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Bloque le défilement de la page
+    }
+  }
+});
+
+// Fermeture au clic sur la croix ou en dehors de l'image
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('image-modal');
+  if (!modal || !modal.classList.contains('active')) return;
+
+  if (e.target.id === 'modal-close' || e.target === modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Rétablit le défilement
+  }
+});
+
+// Fermeture avec la touche Échap
+document.addEventListener('keydown', (e) => {
+  const modal = document.getElementById('image-modal');
+  if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+});
 }

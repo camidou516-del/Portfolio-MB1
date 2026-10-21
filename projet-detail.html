@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Détail du Projet - Maleyni Ba</title>
+  <title>Détail du Projet — Maleyni Ba</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -29,7 +29,7 @@
     <div id="media-content" class="media-section"></div>
 
     <!-- DOUBLE COLONNE : À PROPOS (GAUCHE) & FICHE TECHNIQUE (DROITE) -->
-    <div class="project-grid-info">
+    <div id="project-info-grid" class="project-grid-info">
       
       <!-- COLONNE GAUCHE : DESCRIPTION & SKILLS -->
       <div class="info-block-left">
@@ -91,12 +91,36 @@
   </footer>
 
   <script>
-    // BASE DE DONNÉES AVEC LES 6 LIENS GOOGLE DRIVE & LA GALERIE PHOTOS
+    // BASE DE DONNÉES DES PROJETS AVEC LIENS GOOGLE DRIVE & GALERIE
     const projectsData = {
+      "projet-jeunes-climat": {
+        title: "Bootcamp Jeunes & Climat",
+        category: "CAPITALISATION & ENGAGEMENT",
+        subtitle: "Film documentaire sur le rôle actif de la jeunesse pour le climat et la résilience en Casamance.",
+        description: "Ce film récapitulatif retrace le Grand Bootcamp Régional Jeunes & Climat tenu à Youtou (commune de Enampore / Nyassia). Financé par le Projet de Développement Économique de la Casamance (PDEC) et exécuté par le GRDR en partenariat avec le Ministère de la Jeunesse, le projet met en lumière l'engagement citoyen, les débats de sensibilisation et la forte mobilisation des jeunes pour la protection environnementale de leur terroir.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/1QDgr2WBRQ3pg0AwbmHwOLk1v6dGb7wvx/preview",
+        role: "Réalisateur / Cadreur / Monteur",
+        client: "PDEC / GRDR ",
+        annee: "2026",
+        materiel: "Caméra 4K, Éclairage, Micro-cravate, Premiere Pro"
+      },
+      "projet-rizao": {
+        title: "Bootcamp RIZAO — Entente de Diouloulou",
+        category: "ENTREPRENEURIAT & INCLUSION",
+        subtitle: "Renforcement des capacités des jeunes dans la filière rizicole et l'entrepreneuriat.",
+        description: "Organisé à Kafountine au siège de l'Entente de Diouloulou dans le cadre du projet RIZAO, ce bootcamp est dédié au développement des compétences de la jeunesse. La vidéo retrace les ateliers immersifs axés sur le leadership, la négociation, la gestion financière, la contractualisation et la transformation sociale positive au sein de la filière rizicole.",
+        type: "video",
+        videoSrc: "https://drive.google.com/file/d/1epDcd0_2wV_I1w6EZp6whzI_Qqs9W_aS/preview",
+        role: "Opérateur Vidéo / Monteur",
+        client: "ONG MEDA/ DECLCIC ",
+        annee: "2026",
+        materiel: "Caméra 4K, Captation Drone, DaVinci Resolve"
+      },
       "declic": {
         title: "Bootcamp des Éco-Entrepreneurs",
         category: "CAPITALISATION & REALISATION",
-        subtitle: "Réalisation et montage d'un reportage d'impact sur le renforcement de l'entrepreneuriat vert auprès des jeunes en Cote d'Ivoire.",
+        subtitle: "Réalisation et montage d'un reportage d'impact sur le renforcement de l'entrepreneuriat vert auprès des jeunes en Côte d'Ivoire.",
         description: "Ce projet de capitalisation vidéo met en lumière le Bootcamp des Éco-Entrepreneurs, une initiative d'immersion conçue pour former et outiller les jeunes aux opportunités de l'entrepreneuriat vert et de l'agroalimentaire. Réalisée au cœur des activités de terrain, la vidéo capture les dynamiques de groupe, les sessions d'apprentissage et la vision portée par la coordination du programme pour une transition écologique durable.",
         type: "video",
         videoSrc: "https://drive.google.com/file/d/1k3ZmP09d2E8-pjGyXk4HjUG5wRifPNFV/preview",
@@ -109,7 +133,7 @@
         title: "Agence de Développement Municipal",
         category: "CAPITALISATION & REALISATION",
         subtitle: "Valorisation des projets d'infrastructures et de développement territorial.",
-        description: "Production d'une capsule institutionnelle pour l'Agence de Développement Municipal (ADM), partenaire de référence des collectivités territoriales au Sénégal. Le film présente la couverture nationale de l'agence ainsi que ses programmes majeurs (PAC, PACASEN, PROGEP...) à travers une combinaison de graphismes textuels animés et d'images d'infrastructures réalisées (écoles, aménagements urbains à Pikine).",
+        description: "Production d'une capsule institutionnelle pour l'Agence de Développement Municipal (ADM), partenaire de référence des collectivités territoriales au Sénégal. Le film présente la couverture nationale de l'agence ainsi que ses programmes majeurs (PAC, PACASEN, PROGEP...) à travers une combinaison de graphismes textuels animés et d'images d'infrastructures réalisées.",
         type: "video",
         videoSrc: "https://drive.google.com/file/d/1n-SQZrqkLnzC4EoEskGK_GLQ6GEVaXpR/preview",
         role: "Réalisateur / Cadreur / Monteur",
@@ -125,7 +149,7 @@
         type: "video",
         videoSrc: "https://drive.google.com/file/d/1nqWwrU_ay_g17SK7zAVZnqdAbgxxw3S7/preview",
         role: "Réalisateur / Cadreur / Monteur",
-        client: "GRDR / Ville de Ziguinchor",
+        client: "Ville de Ziguinchor",
         annee: "2024",
         materiel: "Premiere Pro, Final Cut, Caméra 4K, Micro-cravate"
       },
@@ -133,13 +157,13 @@
         title: "Girls' Education",
         category: "Film Inspiration — Éducation des Filles",
         subtitle: "Capsule vidéo poétique et engagée valorisant l'accès des jeunes filles à l'éducation.",
-        description: "Production d'un spot court et percutant axé sur l'émancipation des jeunes filles par l'éducation et les filières scientifiques (STEM). Le projet combine des plans de classe immersifs, des vues aériennes d'établissements scolaires en milieu rural et des portraits intimistes. La voix off poétique renforce le message d'espoir et la détermination des jeunes filles à construire leur avenir.",
+        description: "Production d'un spot court et percutant axé sur l'émancipation des jeunes filles par l'éducation. Le projet combine des plans de classe immersifs, des vues aériennes d'établissements scolaires en milieu rural et des portraits intimistes. La voix off poétique renforce le message d'espoir et la détermination des jeunes filles à construire leur avenir.",
         type: "video",
         videoSrc: "https://drive.google.com/file/d/12AEt6G5QgZmKmzDz26u2GkB2o3IyVGRH/preview",
         role: "Réalisateur / Cadreur / Monteur",
         client: "Projet Éducation & Inclusivité",
         annee: "2024",
-        materiel: "vMix, Fialcut, Premiere Pro, Caméras PTZ"
+        materiel: "vMix, Final Cut, Premiere Pro, Caméras PTZ"
       },
       "projet4": {
         title: "Film d'Impact — Projet SEMER (Fondem)",
@@ -151,60 +175,100 @@
         role: "Opérateur Drone / Cadreur / Monteur",
         client: "Fondem",
         annee: "2024",
-        materiel: "DaVinci Resolve, After Effects, Caméra Drone DJI Mavic 3,Final Cut Pro"
+        materiel: "DaVinci Resolve, After Effects, Caméra Drone DJI Mavic 3, Final Cut Pro"
       },
       "projet5": {
         title: "Documentaire — Gestion du Littoral Soungrougrou",
         category: "CAPITALISATION & REALISATION",
         subtitle: "Reportage environnemental sur la préservation du fleuve Soungrougrou et la gestion concertée des ressources maritimes.",
-        description: "Réalisation d'une capsule vidéo d'impact pour le GRDR (Migrations, Citoyenneté, Solidarités). Ce documentaire met en valeur les initiatives de préservation de l'écosystème du fleuve Soungrougrou (Casamance) menées entre 2014 et 2024. Le film associe des prises de vues fluviales, le quotidien des pêcheurs et une illustration cartographique pour sensibiliser à la protection du littoral.",
+        description: "Réalisation d'une capsule vidéo d'impact pour le GRDR. Ce documentaire met en valeur les initiatives de préservation de l'écosystème du fleuve Soungrougrou (Casamance). Le film associe des prises de vues fluviales, le quotidien des pêcheurs et une illustration cartographique pour sensibiliser à la protection du littoral.",
         type: "video",
         videoSrc: "https://drive.google.com/file/d/1OQlEl5Jh0LqWwJ3-WX3H0mpQUWadkDed/preview",
         role: "Cadreur / Monteur",
-        client: "GRDR (Migrations, Citoyenneté, Solidarités)",
+        client: "ONG Déclic",
         annee: "2023",
         materiel: "Final Cut Pro, Caméras Studio, Éclairage Trois Points"
       },
       "projet6": {
         title: "Bootcamp Citoyen & Numérique Salmaïtou",
         category: "CAPITALISATION & REALISATION",
-        subtitle: "Film récapitulatif d'un bootcamp de 8 jours dédié à l'inclusivité et à la formation numérique des jeunes filles à Nyassia.",
-        description: "Réalisation du film récapitulatif du Bootcamp Salmaïtou, un programme d'immersion de 8 jours organisé à Nyassia par l'association Déclic avec l'appui de l'UNICEF et de l'ARDZ. La vidéo témoigne des ateliers de formation numérique, des espaces d'échanges et de la dynamique communautaire mise en place pour lever les freins auxquels font face les jeunes filles de la région.",
+        subtitle: "Film récapitulatif d'un bootcamp de 8 jours dédié à l'inclusivité et à la formation numérique des jeunes filles à Niaguis.",
+        description: "Réalisation du film récapitulatif du Bootcamp Salmaïtou, un programme d'immersion de 8 jours organisé à Nyassia par l'association Déclic avec l'appui de l'UNICEF et de l'ARDZ. La vidéo témoigne des ateliers de formation numérique et des espaces d'échanges.",
         type: "video",
         videoSrc: "https://drive.google.com/file/d/1Vl0tenVn3ZAhNS1Fm6nd8_RDfknyY4Tf/preview",
         role: "Réalisateur & Monteur",
-        client: "Association DÉCLIC / UNICEF / ARDZ",
+        client: "ONG DÉCLIC",
         annee: "2024",
         materiel: "Stabilisateur Drone, Premiere Pro"
       },
       "projet8": {
-        title: "Témoignage & Inclusion-Déclic-Sédhiou",
+        title: "Témoignage & Inclusion — Déclic",
         category: "CAPITALISATION & REALISATION",
         subtitle: "Capsule vidéo poignante donnant la parole aux acteurs locaux sur l'inclusion et le droit des personnes en situation de handicap.",
-        description: "Réalisation d'une capsule vidéo d'impact social au Centre Conseil Adolescents (CCA) de Sédhiou. Le projet recueille les témoignages poignants d'intervenants locaux, notamment Pape Kemo Dramé, pour porter la voix des jeunes en situation de handicap et promouvoir une meilleure insertion sociale. L'intégration de vues aériennes (drone) permet de contextualiser la région de Sédhiou tout en apportant une dimension visuelle soignée au récit.",
+        description: "Réalisation d'une capsule vidéo d'impact social au Centre Conseil Adolescents (CCA) de Sédhiou. Le projet recueille les témoignages poignants d'intervenants locaux pour porter la voix des jeunes en situation de handicap et promouvoir une meilleure insertion sociale.",
         type: "video",
         videoSrc: "https://drive.google.com/file/d/1TSCmUuy4BiEpIJDyvP625h_puPMNuWKF/preview",
         role: "Réalisateur & Monteur",
-        client: "CCA Sédhiou (Centre Conseil Adolescents)",
+        client: "ONG DÉCLIC",
         annee: "2024",
         materiel: "Final Cut Pro, Premiere Pro"
       },
       "coulisses": {
-        title: "Série Clichés & Coulisses de Tournage",
+        title: "Galerie",
         category: "EXPERTISE COUP DE CŒUR",
-        subtitle: "Galerie immersive des moments forts de production et de tournage.",
+        subtitle: "Galerie immersive des moments forts de production, reportages et tournages.",
         type: "gallery",
         images: [
-          "assets/photo/0H2A0997.jpg",
-          "assets/photo/DSC06000.jpg",
           "assets/photo/b6.jpg",
           "assets/photo/b2.jpg",
           "assets/photo/b3.jpg",
-          "assets/photo/DSC08566.jpg",
           "assets/photo/b1.jpg",
+          "assets/photo/bh.jpg",
+          "assets/photo/_DSC2213.jpg",
+          "assets/photo/_DSC2413.jpg",
+          "assets/photo/_DSC2472.jpg",
+          "assets/photo/_DSC2896.jpg",
+          "assets/photo/_DSC3230.jpg",
+          "assets/photo/DJI_0197.jpg",
+          "assets/photo/DJI_0255.jpg",
+          "assets/photo/DSC00839.jpg",
+          "assets/photo/DSC01044.jpg",
+          "assets/photo/DSC01059.jpg",
+          "assets/photo/DSC01919.jpg",
+          "assets/photo/DSC03076%20copie.jpg",
+          "assets/photo/DSC03229%20copie.jpg",
+          "assets/photo/DSC03257%20copie.jpg",
+          "assets/photo/DSC03300%20copie.jpg",
+          "assets/photo/DSC03527%20copie.jpg",
+          "assets/photo/DSC03834%20copie.jpg",
+          "assets/photo/DSC03874%20copie.jpg",
           "assets/photo/DSC05972.jpg",
-          "assets/photo/DSC08467.jpg"
-        ],
+          "assets/photo/DSC06000.jpg",
+          "assets/photo/DSC08467.jpg",
+          "assets/photo/DSC00241.jpg",
+          "assets/photo/DSC00243.jpg",
+          "assets/photo/DSC05176.jpg",
+          "assets/photo/DSC05214.jpg",
+          "assets/photo/DSC05224.jpg",
+          "assets/photo/DSC05225.jpg",
+          "assets/photo/DSC05675.jpg",
+          "assets/photo/DSC06928.jpg",
+          "assets/photo/DSC08472.jpg",
+          "assets/photo/DSC08562.jpg",
+          "assets/photo/DSC08566.jpg",
+          "assets/photo/DSC08570.jpg",
+          "assets/photo/0H2A0997.jpg",
+          "assets/photo/0H2A1322.jpg",
+          "assets/photo/DSC08659.jpg",
+          "assets/photo/DSC08683.jpg",
+          "assets/photo/DSC08687.jpg",
+          "assets/photo/DSC08691.jpg",
+          "assets/photo/DSC08710.jpg",
+          "assets/photo/DSC08750.jpg",
+          "assets/photo/DSC09610.jpg",
+          "assets/photo/DSC09709.jpg",
+          "assets/photo/DSC09712.jpg"
+        ]
       }
     };
 
@@ -217,16 +281,18 @@
       document.getElementById('project-title').innerText = project.title;
       document.getElementById('project-category').innerText = project.category;
       document.getElementById('project-subtitle').innerText = project.subtitle;
-      document.getElementById('project-description').innerText = project.description;
-      
-      document.getElementById('ft-role').innerText = project.role;
-      document.getElementById('ft-client').innerText = project.client;
-      document.getElementById('ft-annee').innerText = project.annee;
-      document.getElementById('ft-materiel').innerText = project.materiel;
 
       const mediaContainer = document.getElementById('media-content');
+      const infoGrid = document.getElementById('project-info-grid');
 
       if (project.type === 'video') {
+        infoGrid.style.display = 'grid';
+        document.getElementById('project-description').innerText = project.description || '';
+        document.getElementById('ft-role').innerText = project.role || '';
+        document.getElementById('ft-client').innerText = project.client || '';
+        document.getElementById('ft-annee').innerText = project.annee || '';
+        document.getElementById('ft-materiel').innerText = project.materiel || '';
+
         mediaContainer.innerHTML = `
           <div class="video-container">
             <iframe 
@@ -237,6 +303,8 @@
           </div>
         `;
       } else if (project.type === 'gallery') {
+        infoGrid.style.display = 'none';
+
         let galleryHTML = '<div class="gallery-grid">';
         project.images.forEach(imgSrc => {
           galleryHTML += `
